@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    font-size: 10px;
+}
+
+:root{
+    --primary-color:#5221E6;
+    --primary-text:#16161a;
+    --secondary-text:#ffffff;
+}
+
+body{
+    padding: 2rem;
+    font-family: Poppins,sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.buttons{
+    margin: 3.5rem 0;
+    display: flex;
+}
+
+
+button{
+    padding: 1.2rem 2rem;
+    width: 100%;
+    max-width: 20rem;
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    border-radius: 5px;
+}
+
+.cta-1{
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--secondary-text);
+}
+
+.cta-2{
+    border: 2px solid var(--primary-color);
+    background: none;
+}
+
+
+.logo{
+    font-size: 2.6rem;
+    font-family: Poppins,sans-serif;
+    font-weight: 500;
+    color: var(--primary-text);
+}
+
+.logo span{
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.hamburger span{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: var(--primary-text);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu{
+    display: none;
+}
+
+.hero{
+    margin: 5rem 0;
+}
+
+.hero p{
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.hero span{
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+
+/* Media Queries */
+
+@media only screen and (min-width: 675px) {
+
+
+    .menu{
+        display: flex;
+    }
+
+    .logo{
+        font-size: 2.8rem;
+    }
+
+    .nav-item{
+        padding: 0 2rem;
+    }
+
+    .nav-link{
+        font-size: 1.6rem;
+        font-family: Poppins,sans-serif;
+        font-weight: 600;
+        color: var(--primary-text);
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    .buttons{
+        display: none;
+    }
+
+}
