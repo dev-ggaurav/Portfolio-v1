@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 
@@ -112,17 +112,66 @@ header{
     color: var(--primary-text);
 }
 
+
 .hamburger{
     cursor: pointer;
 }
 
+#hamburger.is-active .bar:nth-child(2){
+    opacity: 0;
+}
+
+#hamburger.is-active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+
+#hamburger.is-active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 
 .menu{
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    transition: all 0.5s ease;
+}
+
+.menu.is-active{
+    left: 0;
+    display: flex;
+    background-color: var(--primary-accent);
+    transition: all 0.5s ease;
+    padding: 3rem 0;
+    z-index: 99;
+}
+
+.menu.is-active .nav-item{
+    margin-bottom: 2rem;
+}
+
+.menu.is-active .nav-item:last-child{
+    margin-bottom: 0;
+}
+
+.menu.is-active a{
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.menu.is-active a:hover{
+    text-decoration: underline;
 }
 
 .hero{
     margin: 5rem 2%;
+    position: relative;
 }
 
 .hero p{
@@ -143,9 +192,13 @@ header{
 
 
     .menu{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        flex-direction: row;
+        position: initial;
+        padding: 0;
+    }
+
+    .menu a:hover{
+        color: var(--primary-accent);
     }
 
     .logo{
