@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
 
+/* Global styles and resets */
+
 *{
     margin: 0;
     padding: 0;
@@ -42,7 +44,7 @@ a{
 }
 
 .buttons{
-    margin: 3.5rem 0;
+    margin: 3rem 0;
     display: flex;
 }
 
@@ -62,14 +64,14 @@ button{
     background-color: var(--primary-accent);
     color: #ffffff;
     border: none;
-    margin-right: 1.5rem;
+    margin-right: 1rem;
 }
 
 .cta-2{
     border: 2px solid var(--primary-accent);
     color: var(--primary-text);
     background: none;
-    margin-left: 1.5rem;
+    margin-left: 1rem;
 }
 
 
@@ -134,10 +136,10 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0;
     width: 100%;
+    height: 100vh;
     position: absolute;
-    top: 80px;
+    top: 60px;
     left: -100%;
     transition: all 0.5s ease;
 }
@@ -145,9 +147,9 @@ header{
 .menu.is-active{
     left: 0;
     display: flex;
-    background-color: var(--primary-accent);
+    background-color: var(--primary-background);
     transition: all 0.5s ease;
-    padding: 3rem 0;
+    padding: 10rem 0;
     z-index: 99;
 }
 
@@ -162,7 +164,7 @@ header{
 .menu.is-active a{
     font-size: 1.8rem;
     font-weight: 500;
-    color: #ffffff;
+    color: var(--primary-text);
 }
 
 .menu.is-active a:hover{
@@ -174,10 +176,17 @@ header{
     position: relative;
 }
 
-.hero p{
+.hero h1{
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: var(--primary-text);
+}
+
+.hero h2{
     font-size: 2.2rem;
     font-weight: 600;
     color: var(--primary-text);
+    padding: 1.5rem 0;
 }
 
 .hero span{
@@ -185,16 +194,31 @@ header{
     font-weight: 700;
 }
 
+.social{
+    margin: 3rem 0;
+}
+
+.social i{
+    padding-right:1.5rem;
+    font-size: 2.1rem;
+    color: var(--primary-text);
+}
+
+.social i:hover{
+    color: var(--primary-accent);
+}
+
 
 /* Media Queries tablet */
 
-@media only screen and (min-width: 675px) {
+@media only screen and (min-width: 650px) {
 
 
     .menu{
         flex-direction: row;
         position: initial;
         padding: 0;
+        height: 0;
     }
 
     .menu a:hover{
@@ -220,14 +244,30 @@ header{
         display: none;
     }
 
-    .buttons{
-        display: none;
-    }
-
     #toggle-btn{
         margin: 0;
         padding: 0;
     }
+
+    .hero{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .social{
+        display: flex;
+        flex-direction: column;
+        padding-top: 0;
+        margin: 0;
+    }
+
+    .social i{
+        margin: 1.2rem 0;
+        padding: 0;
+    }
+
+
 
 }
 
