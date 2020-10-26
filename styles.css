@@ -15,7 +15,8 @@ html{
 }
 
 :root{
-    --primary-accent:#5221E6;
+    --primary-accent:#342fc4;
+    --secondary-accent:#6cef93;
     --primary-text:#16161a;
     --primary-background:#ffffff;
 }
@@ -92,6 +93,10 @@ button{
     color: var(--primary-accent);
 }
 
+.logo .square{
+    font-size: 1.5rem;
+}
+
 .hamburger span{
     display: block;
     width: 25px;
@@ -105,7 +110,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 2rem;
+    margin: 3rem;
 }
 
 .navbar{
@@ -113,9 +118,9 @@ header{
     align-items: center;
 }
 
-.theme{
+.navbar i{
     font-size: 2.1rem;
-    margin: 0 2.1rem;
+    margin: 0 3rem;
     cursor: pointer;
     color: var(--primary-text);
 }
@@ -168,14 +173,30 @@ header{
 }
 
 .menu a{
-    font-size: 1.8rem;
-    font-weight: 500;
+    font-size: 1.6rem;
+    font-weight: 600;
     color: var(--primary-text);
+    position: relative;
 }
 
-.menu a:hover{
-    color: var(--primary-accent);
+.menu a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom:-1.5px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-accent);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
 }
+
+.menu a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
 
 .hero{
     margin: 0 auto;
@@ -252,16 +273,16 @@ header{
 
 
     .logo{
-        font-size: 2.8rem;
+        font-size: 3rem;
     }
 
     .nav-item{
-        margin-left:2.5rem;
+        margin-left:3.5rem;
     }
 
     .nav-link{
         font-size: 1.6rem;
-        padding: 0 0.5rem;
+        /* padding: 0 0.5rem; */
         font-family: Poppins,sans-serif;
         font-weight: 600;
         color: var(--primary-text);
