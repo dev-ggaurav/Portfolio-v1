@@ -236,6 +236,24 @@ header{
     color: var(--primary-accent);
 }
 
+.skills{
+    color: var(--primary-text);
+}
+
+.skills img{
+    width: 3rem; 
+}
+
+.skills-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.skills-text{
+    margin-bottom: 3rem;
+}
+
 
 
 /* Media Queries for tablets */
@@ -316,6 +334,19 @@ header{
         margin: 1.5rem 0;
         padding: 0;
     }
+
+    .skills{
+        display: flex;
+    }
+
+    .skills-cards{
+        margin-left: 5rem;
+    }
+
+    .skills-text{
+        margin-right: 3rem;
+    }
+ 
 
 }
 
