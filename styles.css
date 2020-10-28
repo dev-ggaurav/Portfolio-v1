@@ -19,6 +19,8 @@ html{
     --darker-accent:#2C28A4;
     --primary-text:#16161a;
     --primary-background:#ffffff;
+    --primary-grey:#555555;
+    
 }
 
 body{
@@ -34,6 +36,7 @@ body{
 body.active{
     --primary-text:#ffffff;
     --primary-background:#16161a;
+    --primary-grey:#cececf;
 }
 
 .container{
@@ -54,6 +57,9 @@ a{
     display: flex;
 }
 
+p {
+    color:var(--primary-grey);
+ }
 
 button{
     padding:0.8rem 0;
@@ -236,22 +242,35 @@ header{
     color: var(--primary-accent);
 }
 
-.skills{
+.skills h3{
     color: var(--primary-text);
-}
-
-.skills img{
-    width: 3rem; 
 }
 
 .skills-cards{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    gap: 2rem;
+    row-gap: 5rem;
+}
+
+.skills-cards h3{
+    font-size: 1.3rem;
+    font-weight: 500;
 }
 
 .skills-text{
     margin-bottom: 3rem;
+}
+
+.skills-text h2{
+    font-size: 2.4rem;
+    color: var(--primary-text);
+}
+
+.svg{
+    fill: var(--primary-text);
+    width: 24px; 
+    height: 24px;
 }
 
 
@@ -326,7 +345,8 @@ header{
         display: flex;
         flex-direction: column;
         padding-top: 0;
-        margin: 0;
+        margin-top: 0;
+        margin-right: 3rem;
     }
 
     .social i{
@@ -340,11 +360,15 @@ header{
     }
 
     .skills-cards{
-        margin-left: 5rem;
+        margin-left: 3rem;
+        text-align: left;
     }
 
+    
+    
+
     .skills-text{
-        margin-right: 3rem;
+        margin-right: 5rem;
     }
  
 
@@ -363,6 +387,10 @@ header{
 
     .container{
         padding: 5rem 10%;
+    }
+
+    .skills-cards h3{
+        font-size: 1.5rem;
     }
 
 }
