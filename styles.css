@@ -183,9 +183,20 @@ header{
     font-size: 1.563rem;
     font-weight: 600;
     color: var(--primary-text);
-    position: relative;
+    /* position: relative; */
 }
 
+.highlight {
+    transition: all 0.2s;
+    border-bottom: 3px solid var(--primary-accent);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block; 
+  }
+
+/* 
 .nav-link::after{
     content: '';
     position: absolute;
@@ -202,7 +213,7 @@ header{
 .nav-link:hover::after{
     transform: scaleX(1);
     transform-origin: left;
-}
+} */
 
 
 .hero{
@@ -320,7 +331,6 @@ header{
 
     .nav-link{
         font-size: 1.6rem;
-        /* padding: 0 0.5rem; */
         font-family: Poppins,sans-serif;
         font-weight: 600;
         color: var(--primary-text);
